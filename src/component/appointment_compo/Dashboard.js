@@ -1,9 +1,9 @@
 import React from 'react'
-import Medication1 from "./medication icons/Medication.png";
-import Medication2 from "./medication icons/Medication2.png";
-import Medication3 from "./medication icons/Medication3.png";
-import Medication4 from "./medication icons/Medication4.png";
-import scheduleAppointment from "./patient dashboard buttons/schedule app.png"
+import Medication1 from "../../medication icons/Medication.png";
+import Medication2 from "../../medication icons/Medication2.png";
+import Medication3 from "../../medication icons/Medication3.png";
+import Medication4 from "../../medication icons/Medication4.png";
+import scheduleAppointment from "../../patient dashboard buttons/schedule app.png"
 const Dashboard = () => {
     return (
         <React.Fragment>
@@ -22,4 +22,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+export default Dashboard;

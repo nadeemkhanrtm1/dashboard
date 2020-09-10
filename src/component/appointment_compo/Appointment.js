@@ -1,7 +1,7 @@
 import React,{useState}from 'react';
-import box from "./orange.png";
-import bluebox from "./teal.png";
-import findoc from "./patient dashboard buttons/find doctor.png";
+import box from "../../orange.png";
+import bluebox from "../../teal.png";
+import findoc from "../../patient dashboard buttons/find doctor.png";
 import {BrowserRouter,Route,Switch,Link} from 'react-router-dom';
 import Appointment_component from "./Appointment_section";
 import Messages_component from "./Messages";
@@ -83,25 +83,21 @@ const Appointment = () => {
         setimagesChange18(images[1]);
     }
     return (
-        <BrowserRouter>
+        
         <div className="flexBox">
             <div className="flex1">
                 <div className="innerFlexforFirstDiv">
-                    <Link to="/" className="link">Appointments</Link>
-                    <Link to="/prescriptions" className="link">Prescriptions</Link>
-                    <Link to="/report" className="link">Reports</Link>
-                    <Link to="/messages" className="link">Messages</Link>
+                    <Link to="/schedule" className="link">Appointments</Link>
+                    <Link to="/schedule/prescriptions" className="link">Prescriptions</Link>
+                    <Link to="/schedule/report" className="link">Reports</Link>
+                    <Link to="/schedule/messages" className="link">Messages</Link>
                 </div>
             <Switch>
-                <Route exact path="/" component={Appointment_component}/>
-                <Route exact path="/prescriptions" component={Prescrition_comp}/>
-                <Route exact path="/report" component={Report_comp}/>
-                <Route exact path="/messages" component={Messages_component}/>
+                <Route exact path="/schedule" component={Appointment_component}/>
+                <Route exact path="/schedule/prescriptions" component={Prescrition_comp}/>
+                <Route exact path="/schedule/report" component={Report_comp}/>
+                <Route exact path="/schedule/messages" component={Messages_component}/>
             </Switch>
-            
-            
-            
-            
             </div>
             <div className="flex2">
                 <h3>Choose upto 3 symptoms to<br/> find your doctor</h3>
@@ -194,7 +190,7 @@ const Appointment = () => {
                 </div>
             </div>
         </div>
-        </BrowserRouter>
+        
     );
 };
 

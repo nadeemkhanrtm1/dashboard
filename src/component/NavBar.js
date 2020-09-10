@@ -1,6 +1,7 @@
 import React from 'react';
-import Logo from "./images/logo.png";
-import david from "./images/david.jpg";
+import Logo from "../images/logo.png";
+import david from "../images/david.jpg";
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return(
@@ -9,9 +10,9 @@ const NavBar = () => {
         <nav className="navbar">
           <div className="logo_items">
               <img src={Logo}></img>
-              <a>HOME</a>
-              <a>PROFILE</a>
-              <a>SCHEDULE APPOINTMENTS</a>
+              <Link to="/" className="link">HOME</Link>
+              <Link to="/profile" className="link">PROFILE</Link>
+              <Link to="/schedule" className="link">SCHEDULE APPOINTMENTS</Link>
           </div>
           <div  className="profile_nav">
               <p>Hello!<br/>
